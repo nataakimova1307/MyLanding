@@ -1,0 +1,6 @@
+{
+  "name": "MyLanding",
+  "short_name": "Landing",
+  "start_url": ".",
+  "display": "standalone"
+}
