@@ -1,70 +1,354 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Акимова Наталья</title>
-    <meta name="description" content="1С бухгалтер и копирайтер">
+    <title>Акимова Наталья — 1С бухгалтер, копирайтер, промт-специалист</title>
+    <meta
+            name="description"
+            content="Персональный сайт Акимовой Натальи — 1С бухгалтер, копирайтер, рерайтер и специалист по промтингу. Помощь с текстами, документами и рабочими процессами."
+    />
+    <meta
+            name="keywords"
+            content="Акимова Наталья, 1С бухгалтер, копирайтинг, рерайтинг, промтинг, тексты, персональный сайт"
+    />
+    <meta name="author" content="Акимова Наталья" />
+    <meta name="theme-color" content="#49c7c7" />
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Акимова Наталья">
-    <meta property="og:description" content="1С бухгалтер, копирайтер">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Акимова Наталья — персональный сайт" />
+    <meta
+            property="og:description"
+            content="1С бухгалтер, копирайтер, рерайтер и специалист по промтингу."
+    />
+    <meta property="og:locale" content="ru_RU" />
 
-    <link rel="stylesheet" href="../src/css/variables.css">
-    <link rel="stylesheet" href="../src/css/styles.css">
-    <link rel="stylesheet" href="../src/css/animations.css">
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="../src/css/variables.css" />
+    <link rel="stylesheet" href="../src/css/styles.css" />
+    <link rel="stylesheet" href="../src/css/animations.css" />
 </head>
-
 <body>
+<div class="preloader" aria-hidden="true">
+    <div class="preloader__box">
+        <div class="preloader__ring"></div>
+        <div class="preloader__text">Загрузка</div>
+    </div>
+</div>
 
-<header class="header">
-    <img src="../src/img/natalia.jpg" alt="Наталья" class="avatar">
-    <nav>
-        <a href="#about">Обо мне</a>
-        <a href="#skills">Навыки</a>
-        <a href="#portfolio">Портфолио</a>
-        <a href="#contacts">Контакты</a>
-    </nav>
+<a class="skip-link" href="#main-content">Перейти к содержимому</a>
+
+<div class="page-bg" aria-hidden="true">
+    <span class="blur-shape blur-shape--one"></span>
+    <span class="blur-shape blur-shape--two"></span>
+    <span class="blur-shape blur-shape--three"></span>
+</div>
+
+<header class="header" aria-label="Шапка сайта">
+    <div class="header__inner">
+        <a class="brand" href="#hero" aria-label="На главную">
+            <img src="../src/img/natalia.jpg" alt="Акимова Наталья" class="brand__avatar" />
+            <span class="brand__text">Акимова Наталья</span>
+        </a>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+        <label for="nav-toggle" class="burger" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#contacts" class="nav__cta">Связаться</a>
+        </nav>
+    </div>
 </header>
 
-<section class="hero">
-    <h1>Акимова Наталья</h1>
-    <p>1С бухгалтер • Копирайтер • Промт-инженер</p>
-    <a href="#contacts" class="btn">Связаться</a>
-</section>
+<main id="main-content">
+    <section id="hero" class="hero" aria-label="Главный экран">
+        <div class="hero__overlay"></div>
 
-<section id="about" class="section">
-    <h2>Обо мне</h2>
-    <p>Помогаю бизнесу с бухгалтерией и текстами.</p>
-</section>
+        <div class="hero__container">
+            <div class="hero__content">
+                <span class="hero__badge">Персональный сайт-визитка</span>
 
-<section id="skills" class="section">
-    <h2>Навыки</h2>
-    <ul class="skills">
-        <li>📊 1С бухгалтер</li>
-        <li>✍️ Копирайтинг</li>
-        <li>📝 Рерайтинг</li>
-        <li>🤖 Промтинг</li>
-    </ul>
-</section>
+                <h1 class="hero__title">Акимова Наталья</h1>
 
-<section id="portfolio" class="section">
-    <h2>Портфолио</h2>
-    <div id="portfolio-list" class="cards"></div>
-</section>
+                <p class="hero__subtitle">
+                    1С бухгалтер, копирайтер, рерайтер и специалист по промтингу.
+                    Помогаю упорядочить документы, подготовить тексты и сделать рабочие
+                    процессы понятнее и эффективнее.
+                </p>
 
-<section class="cta">
-    <h2>Готовы начать?</h2>
-    <a href="#contacts" class="btn">Обсудить проект</a>
-</section>
+                <div class="hero__tags" aria-label="Ключевые направления">
+                    <span class="hero__tag">1С бухгалтер</span>
+                    <span class="hero__tag">Копирайтинг</span>
+                    <span class="hero__tag">Рерайтинг</span>
+                    <span class="hero__tag">Промтинг</span>
+                </div>
 
-<section id="contacts" class="section">
-    <h2>Контакты</h2>
-    <p>Email: qqqqq@mail.ru</p>
-    <p>Telegram: @ddffggg</p>
-    <p>Телефон: +79991234567</p>
-</section>
+                <div class="hero__actions">
+                    <a href="#contacts" class="btn btn--primary">Связаться</a>
+                    <a href="#portfolio" class="btn btn--secondary">Смотреть портфолио</a>
+                </div>
+
+                <div class="hero-stats" aria-label="Преимущества">
+                    <div class="stat-card glow-card">
+                        <span class="stat-card__value" data-counter="4">0</span>
+                        <span class="stat-card__label">Ключевых направления работы</span>
+                    </div>
+                    <div class="stat-card glow-card">
+                        <span class="stat-card__value" data-counter="3">0</span>
+                        <span class="stat-card__label">Формата взаимодействия с клиентами</span>
+                    </div>
+                    <div class="stat-card glow-card">
+                        <span class="stat-card__value" data-counter="100">0</span>
+                        <span class="stat-card__label">Внимания к точности и деталям</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section section--about" aria-labelledby="about-title">
+        <div class="section__heading">
+            <span class="section__eyebrow">Обо мне</span>
+            <h2 id="about-title">Компетентный подход к текстам, учёту и цифровым задачам</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card glow-card about-card--main">
+                <p class="about-lead">
+                    Я помогаю бизнесу и частным клиентам решать практические задачи:
+                    от работы с 1С и документами до подготовки качественных текстов и
+                    грамотного использования AI-инструментов.
+                </p>
+
+                <p>
+                    Для меня важны аккуратность, понятная подача, внимание к деталям и
+                    реальная польза результата. В каждом проекте я стремлюсь к тому,
+                    чтобы клиент получил не просто выполненную задачу, а удобное и
+                    понятное решение.
+                </p>
+            </div>
+
+            <div class="about-card glow-card">
+                <h3>Что вы получаете</h3>
+                <ul class="feature-list">
+                    <li>Чёткую и деловую коммуникацию</li>
+                    <li>Аккуратную работу с текстами и документами</li>
+                    <li>Внимание к срокам и структуре</li>
+                    <li>Практический результат без лишней сложности</li>
+                </ul>
+            </div>
+
+            <div class="about-card glow-card">
+                <h3>Формат работы</h3>
+                <ul class="feature-list">
+                    <li>Разовые задачи и небольшие проекты</li>
+                    <li>Подготовка и редактирование материалов</li>
+                    <li>Поддержка по текстам и рабочим процессам</li>
+                    <li>Обсуждение деталей в удобном формате</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+        <div class="section__heading">
+            <span class="section__eyebrow">Навыки</span>
+            <h2 id="skills-title">Ключевые направления работы</h2>
+        </div>
+
+        <div class="skills-grid">
+            <article class="skill-card glow-card">
+                <div class="skill-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 19V8M10 19V5M16 19V11M22 19V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>1С бухгалтер</h3>
+                <p>Работа с учётом, документами и систематизацией информации.</p>
+            </article>
+
+            <article class="skill-card glow-card">
+                <div class="skill-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 20H20M7 16L17 6M15 6H17V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Копирайтинг</h3>
+                <p>Подготовка понятных, аккуратных и полезных текстов под задачу.</p>
+            </article>
+
+            <article class="skill-card glow-card">
+                <div class="skill-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 4H14L18 8V20H6V4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M14 4V8H18" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Рерайтинг</h3>
+                <p>Переработка текстов для улучшения структуры, ясности и подачи.</p>
+            </article>
+
+            <article class="skill-card glow-card">
+                <div class="skill-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18H15M10 22H14M12 2C8.686 2 6 4.686 6 8C6 10.143 7.123 12.024 8.815 13.086C9.558 13.553 10 14.329 10 15.207V16H14V15.207C14 14.329 14.442 13.553 15.185 13.086C16.877 12.024 18 10.143 18 8C18 4.686 15.314 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>Промтинг</h3>
+                <p>Работа с AI-инструментами для ускорения текстовых и рабочих задач.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+        <div class="section__heading">
+            <span class="section__eyebrow">Портфолио</span>
+            <h2 id="portfolio-title">Примеры задач и направлений</h2>
+        </div>
+
+        <div class="portfolio-grid">
+            <article class="portfolio-card glow-card">
+                <div class="portfolio-card__visual portfolio-card__visual--one" aria-hidden="true">
+            <span class="icon-shell">
+              <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 19V8M10 19V5M16 19V11M22 19V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+                </div>
+                <div class="portfolio-card__body">
+                    <h3>Систематизация учёта и документов</h3>
+                    <p>
+                        Подготовка и структурирование информации для удобной работы с
+                        бухгалтерскими и внутренними процессами.
+                    </p>
+                    <span class="portfolio-card__meta">1С · документы · порядок</span>
+                </div>
+            </article>
+
+            <article class="portfolio-card glow-card">
+                <div class="portfolio-card__visual portfolio-card__visual--two" aria-hidden="true">
+            <span class="icon-shell">
+              <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 20H20M7 16L17 6M15 6H17V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+                </div>
+                <div class="portfolio-card__body">
+                    <h3>Тексты для сайта и бизнеса</h3>
+                    <p>
+                        Создание и адаптация материалов для страниц услуг, описаний,
+                        деловых текстов и информационных блоков.
+                    </p>
+                    <span class="portfolio-card__meta">контент · структура · подача</span>
+                </div>
+            </article>
+
+            <article class="portfolio-card glow-card">
+                <div class="portfolio-card__visual portfolio-card__visual--three" aria-hidden="true">
+            <span class="icon-shell">
+              <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18H15M10 22H14M12 2C8.686 2 6 4.686 6 8C6 10.143 7.123 12.024 8.815 13.086C9.558 13.553 10 14.329 10 15.207V16H14V15.207C14 14.329 14.442 13.553 15.185 13.086C16.877 12.024 18 10.143 18 8C18 4.686 15.314 2 12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+                </div>
+                <div class="portfolio-card__body">
+                    <h3>AI-помощь в текстовых задачах</h3>
+                    <p>
+                        Использование промтов и AI-подходов для ускорения обработки
+                        информации и подготовки материалов.
+                    </p>
+                    <span class="portfolio-card__meta">AI · промтинг · эффективность</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section section--cta" aria-label="Призыв к действию">
+        <div class="cta-card glow-card">
+            <span class="section__eyebrow">Сотрудничество</span>
+            <h2>Готовы обсудить задачу?</h2>
+            <p>
+                Напишите удобным способом — обсудим формат работы, сроки и детали проекта.
+            </p>
+
+            <div class="hero__actions hero__actions--center">
+                <a href="#contacts" class="btn btn--primary">Связаться</a>
+                <a href="mailto:qqqqq@mail.ru" class="btn btn--secondary">Написать на почту</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="section" aria-labelledby="contacts-title">
+        <div class="section__heading">
+            <span class="section__eyebrow">Контакты</span>
+            <h2 id="contacts-title">Выберите удобный способ связи</h2>
+        </div>
+
+        <div class="contact-grid">
+            <a class="contact-card glow-card" href="mailto:qqqqq@mail.ru" aria-label="Написать на электронную почту">
+                <div class="contact-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20V18H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M4 8L12 13L20 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="contact-card__body">
+                    <h3>Email</h3>
+                    <p>Для деловых запросов и подробного описания задачи</p>
+                    <span>qqqqq@mail.ru</span>
+                </div>
+            </a>
+
+            <a
+                    class="contact-card glow-card"
+                    href="https://t.me/ddffggg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Написать в Telegram"
+            >
+                <div class="contact-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 3L11 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M22 3L15 21L11 14L3 10L22 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="contact-card__body">
+                    <h3>Telegram</h3>
+                    <p>Быстрая связь и удобное обсуждение деталей</p>
+                    <span>@ddffggg</span>
+                </div>
+            </a>
+
+            <a class="contact-card glow-card" href="tel:+79991234567" aria-label="Позвонить по телефону">
+                <div class="contact-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" class="icon-svg" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92C10.51 20.92 2 12.41 2 1.92C2 1.37 2.45 0.92 3 0.92H6C6.55 0.92 7 1.37 7 1.92V4.92C7 5.38 6.69 5.78 6.25 5.89L4.4 6.35C5.33 9.08 7.84 11.59 10.57 12.52L11.03 10.67C11.14 10.23 11.54 9.92 12 9.92H15C15.55 9.92 16 10.37 16 10.92V13.92C16 14.47 15.55 14.92 15 14.92H12.08C13.24 16.02 14.78 16.79 16.5 17.08L17.03 16.17C17.21 15.85 17.54 15.65 17.9 15.65H21C21.55 15.65 22 16.1 22 16.65V16.92Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="contact-card__body">
+                    <h3>Телефон</h3>
+                    <p>Для оперативной связи и уточнения важных вопросов</p>
+                    <span>+7 999 123-45-67</span>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 Акимова Наталья. Все права защищены.</p>
+</footer>
 
 <script src="../src/js/script.js"></script>
 <script src="../src/js/scroll.js"></script>
